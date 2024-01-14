@@ -414,13 +414,13 @@ div#containerXp{
   }
 
   .layer1 img{
-    height: auto!important;
-    width: 100%!important;
+    min-height: max-content!important;
+    flex-basis: fit-content;
   }
   
   .layer2 img{
-    height: auto!important;
-    width: 100%!important;
+    min-height: max-content!important;
+    flex-basis: fit-content;
   }
 
   .row.multiImage .col{
