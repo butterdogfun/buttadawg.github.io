@@ -46,7 +46,6 @@ background-size: contain;
       height: 100dvh;
       display: flex;
       align-items: center;
-      background-image: url('https://raw.githubusercontent.com/butterdogfun/butterassets.github.io/main/1.png');
       justify-content: center;
       z-index: 255;
       content: '';
@@ -58,18 +57,17 @@ background-size: contain;
   height: 100dvh;
   align-items: center;
   justify-content: center;
-  background-image: url('https://raw.githubusercontent.com/butterdogfun/butterassets.github.io/main/2.png');
   content: '';
 }
 
 .layer1 img{
-  height: auto!important;
-  width: 100vw!important;
+  min-height: max-content!important;
+  flex-basis: fit-content;
 }
 
 .layer2 img{
-  height: auto!important;
-  width: 100vw!important;
+  min-height: max-content!important;
+  flex-basis: fit-content;
 }
 
 #section1{
