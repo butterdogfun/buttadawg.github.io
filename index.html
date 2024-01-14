@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Butterdog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Main CSS -->
+
+    <!-- XP Css -->
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/xp.css"
+    >
+
+    <!-- Pop Up -->
+      <div class="layer1" onclick="openLayer2()">
+
+      </div>
+
+      <div class="layer2">
+
+        <audio id="music" src="https://butterdog.fun/wp-content/uploads/2024/01/buttadawg-superedited.mp3" loop></audio>
+      </div>
+    <!-- Pop Up -->
+
+    <!-- Scroll Pop Up -->
+      <div class="container-fluid" id="containerXp">
+        <div class="wrapperXp" id="wrapperXp">
+          <div class="window window__tab shaking-objectp">
+
+            <div class="heading title-bar">
+              <div class="col">
+                <div class="title-bar-text">mobstabutta.png</div>
+              </div>
+
+              <div class="col">
+                <div class="title-bar-controls">
+                  <a>
+                      <button aria-label="Help"></button>
+                  </a>
+                  
+                  <a onclick="closePopUp()">
+                  <button aria-label="Close"></button>
+                  </a>
+                  
+                  </div>
+              </div>
+            </div>
+
+            <div class="body-content">
+              <img src="assets/bgpopup.jpg" alt="">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    <!-- Scroll Pop Up -->
+
+    <script defer>
+      function openLayer2() {
+          const layer1 = document.querySelector('.layer1');
+          const layer2 = document.querySelector('.layer2');
+          const music = document.getElementById('music');
+  
+          // Sembunyikan layer 1
+          layer1.style.display = 'none';
+  
+          // Tampilkan layer 2
+          layer2.style.display = 'flex';
+          layer2.style.overflow = 'hidden';
+  
+          // Atur overflow pada body untuk mencegah scroll
+          document.body.classList.add('no-scroll');
+  
+          // Putar musik
+          music.play();
+  
+          // Tutup layer 2 setelah 4 detik dengan animasi fade out
+          setTimeout(() => {
+              layer2.style.transition = 'opacity 1s';
+              layer2.style.opacity = '0';
+              setTimeout(() => {
+                layer2.style.display = 'none';
+              }, 4200);
+  
+              // Hentikan animasi fade out setelah 1 detik
+            setTimeout(() => {
+                document.body.classList.add('normalbody');
+                document.body.classList.remove('no-scroll');
+            }, 1000);
+          }, 4000);
+      }
+    </script>
+
+    <script>
+      var popUpDisplayed = false;
+    
+      // Function to open the pop-up and disable scrolling
+      function openPopUp() {
+        if (!popUpDisplayed) {
+          document.getElementById('containerXp').style.display = 'flex';
+          document.body.style.overflow = 'hidden'; // Disable scrolling
+          popUpDisplayed = true; // Set the flag to true
+        }
+      }
+    
+      // Function to close the pop-up and enable scrolling
+      function closePopUp() {
+        document.getElementById('containerXp').style.display = 'none';
+        document.body.style.overflow = 'auto'; // Enable scrolling
+      }
+    
+      // Add an event listener to check scroll position
+      window.addEventListener('scroll', function() {
+        var scrollPosition = window.scrollY || window.pageYOffset;
+    
+        // Check if scroll position is 25% or more of the document height
+        if (scrollPosition >= 0.25 * document.body.scrollHeight) {
+          openPopUp();
+        }
+      });
+    </script>
+  
+  </head>
+  <body>
+
+
+
+
+    <!-- Section Start -->
+
+      <section class="mainSection" id="section1">
+
+        <div class="container 1440">
+          <div class="row mainRow">
+
+            <div class="col-md-4 col-s-1">
+              <div class="wrapper quote">
+                <img src="assets/fabiobutta.png" alt="" class="quoteimg"/>
+                <div class="quoteText">
+                  <span>
+                    <i>“I’ve never left the house without Butterdog.”<br>
+                    - Fabio Cunningham</i>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-8 col-s-2">
+              <div class="wrapper information">
+
+                <div class="headerArea">
+                  <span>Butterdog</span>
+                  <span>$DAWG</span>
+                </div>
+
+                <div class="tokenArea">
+                  <span>65Z76ENVtuTVohmGeSMVAPW7ArRoUByZspCN3Yb7k7p</span>
+                </div>
+
+                <div class="row buttonArea">
+                  <a href="#" class="buttonLink col-md-6">
+                    <div class="buttonXP">
+                      <img src="assets/WMS-Broadcast-1.svg" alt="">
+                      <span>follow the butter</span>
+                    </div>
+                  </a>
+
+                  <a href="#" class="buttonLink col-md-6">
+                    <div class="buttonXP">
+                      <img src="assets/Task-Manager-1.svg" alt="">
+                      <span>look at the butter</span>
+                    </div>
+                  </a>
+
+                  <a href="#" class="buttonLink col-md-6">
+                    <div class="buttonXP">
+                      <img src="assets/Windows-Messenger-1.svg" alt="">
+                      <span>talk to the butter</span>
+                    </div>
+                  </a>
+
+                  <a href="#" class="buttonLink col-md-6">
+                    <div class="buttonXP">
+                      <img src="assets/Remote-Assistance-1.svg" alt="">
+                      <span>BUY the butter</span>
+                    </div>
+                  </a>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <section class="mainSection" id="section2">
+        <div>
+
+          <div class="moving-bar">
+            <div class="marquee-wrapper">
+              <div class="container">
+                <div class="marquee-block">
+                  <div class="marquee-inner to-left">
+                    <span>
+                      <div class="marquee-item">
+                        DAWG <a class="triangle">▲ </a><a class="green">69.42 </a>
+                      </div>
+                                <div class="marquee-item">
+                        DAWG <a class="triangle">▲ </a><a class="green">69.42 </a>
+                      </div>
+                                <div class="marquee-item">
+                        DAWG <a class="triangle">▲ </a><a class="green">69.42 </a>
+                      </div>
+                                <div class="marquee-item">
+                        DAWG <a class="triangle">▲ </a><a class="green">69.42 </a>
+                      </div>
+                                <div class="marquee-item">
+                        DAWG <a class="triangle">▲ </a><a class="green">69.42 </a>
+                      </div>
+                      <div class="marquee-item">
+                        DAWG <a class="triangle">▲ </a><a class="green">69.42 </a>
+                      </div>
+                    </span>
+                    <span>
+                                <div class="marquee-item">
+                        DAWG <a class="triangle">▲ </a><a class="green">69.42 </a>
+                      </div>
+                                <div class="marquee-item">
+                        DAWG <a class="triangle">▲ </a><a class="green">69.42 </a>
+                      </div>
+                                <div class="marquee-item">
+                        DAWG <a class="triangle">▲ </a><a class="green">69.42 </a>
+                      </div>
+                                <div class="marquee-item">
+                        DAWG <a class="triangle">▲ </a><a class="green">69.42 </a>
+                      </div>
+                                <div class="marquee-item">
+                        DAWG <a class="triangle">▲ </a><a class="green">69.42 </a>
+                      </div>
+                      <div class="marquee-item">
+                        DAWG <a class="triangle">▲ </a><a class="green">69.42 </a>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="img-area">
+              <img src="assets/buttawaifu-ezgif.com-cut.gif" alt="">
+            </div>
+
+            <div class="marquee-wrapper">
+              <div class="container">
+                <div class="marquee-block">
+                  <div class="marquee-inner to-lefts">
+                    <span>
+                      <div class="marquee-item">
+                        DAWG <a class="triangle">▲ </a><a class="green">69.42 </a>
+                      </div>
+                                <div class="marquee-item">
+                        DAWG <a class="triangle">▲ </a><a class="green">69.42 </a>
+                      </div>
+                                <div class="marquee-item">
+                        DAWG <a class="triangle">▲ </a><a class="green">69.42 </a>
+                      </div>
+                                <div class="marquee-item">
+                        DAWG <a class="triangle">▲ </a><a class="green">69.42 </a>
+                      </div>
+                                <div class="marquee-item">
+                        DAWG <a class="triangle">▲ </a><a class="green">69.42 </a>
+                      </div>
+                      <div class="marquee-item">
+                        DAWG <a class="triangle">▲ </a><a class="green">69.42 </a>
+                      </div>
+                    </span>
+                    <span>
+                                <div class="marquee-item">
+                        DAWG <a class="triangle">▲ </a><a class="green">69.42 </a>
+                      </div>
+                                <div class="marquee-item">
+                        DAWG <a class="triangle">▲ </a><a class="green">69.42 </a>
+                      </div>
+                                <div class="marquee-item">
+                        DAWG <a class="triangle">▲ </a><a class="green">69.42 </a>
+                      </div>
+                                <div class="marquee-item">
+                        DAWG <a class="triangle">▲ </a><a class="green">69.42 </a>
+                      </div>
+                                <div class="marquee-item">
+                        DAWG <a class="triangle">▲ </a><a class="green">69.42 </a>
+                      </div>
+                      <div class="marquee-item">
+                        DAWG <a class="triangle">▲ </a><a class="green">69.42 </a>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <section class="mainSection" id="section3">
+        <div class="container 1440">
+
+          <div class="row multiImage">
+            <div class="col">
+              <img src="assets/unbeleivable 1.png" alt="">
+              <img src="assets/furry 1.png" alt="">
+            </div>
+
+            <div class="col">
+              <img src="assets/scrolly 1.png" alt="">
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    <!-- Section End -->
+
+
+    
+    <!-- Script from Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Script from Bootstrap -->
+
+    <script> 
+      // Memaksa scroll ke bagian atas saat halaman dimuat ulang
+      window.addEventListener('beforeunload', function() {
+          window.scrollTo(0, 0);
+      });
+      
+      // Memaksa scroll ke bagian atas saat konten halaman dimuat
+      window.addEventListener('DOMContentLoaded', function() {
+          window.scrollTo(0, 0);
+      });
+      
+      // Memaksa scroll ke bagian atas pada saat halaman dan semua sumber daya terkait sepenuhnya dimuat
+      window.addEventListener('load', function() {
+          window.scrollTo(0, 0);
+      });
+      
+      // Memaksa scroll ke bagian atas setelah beberapa saat halaman dimuat
+      window.addEventListener('pageshow', function() {
+          setTimeout(function() {
+              window.scrollTo(0, 0);
+          }, 100);
+      });
+      
+      // Memaksa scroll ke bagian atas jika pengguna kembali ke halaman (dari cache atau sejarah)
+      window.addEventListener('pageshow', function(event) {
+          if (event.persisted) {
+              window.scrollTo(0, 0);
+          }
+      });
+      
+      </script>
+
+  </body>
+</html>
