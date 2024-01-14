@@ -465,6 +465,10 @@ div#containerXp{
   div.headerArea{
 
   }
+
+  .wrapper.information{
+    row-gap:0px;
+  }
 }
 
 /* Untuk Tampilan Tablet */
