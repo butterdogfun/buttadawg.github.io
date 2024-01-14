@@ -389,6 +389,10 @@ div#containerXp{
     width:50px;
     margin-bottom: 10px;
   }
+
+  .headerArea{
+    row-gap:0px;
+  }
   
   .headerArea span:first-child{
     font-size:62.5px;
@@ -459,7 +463,7 @@ div#containerXp{
   }
 
   div.headerArea{
-    margin-top: 20px;
+
   }
 }
 
