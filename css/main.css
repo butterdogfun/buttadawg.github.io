@@ -413,10 +413,15 @@ div#containerXp{
     font-size: 20px;
   }
 
-  .layer1 img{
-    height: auto!important;
-    width: 100%!important;
-  }
+.layer1 img{
+  height: auto!important;
+  width: auto!important;
+}
+
+.layer2 img{
+  height: auto!important;
+  width: auto!important;
+}
   
   .layer2 img{
     height: auto!important;
