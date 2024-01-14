@@ -414,13 +414,13 @@ div#containerXp{
   }
 
   .layer1 img{
-    min-height: max-content!important;
+    min-height: auto!important;
     flex-basis: fit-content;
     width:100%!important;
   }
   
   .layer2 img{
-    min-height: max-content!important;
+    min-height: auto!important;
     flex-basis: fit-content;
     width:100%!important;
   }
