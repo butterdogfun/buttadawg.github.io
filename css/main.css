@@ -492,6 +492,11 @@ div#containerXp{
   .buttonLink:hover{
   transform: scale(1.1);
   }
+
+  .headerArea{
+    row-gap:0px!important;
+  }
+
 }
 
 /* Tab View */
@@ -565,15 +570,6 @@ div#containerXp{
 
   div.headerArea{
     margin-top: 20px;
-    row-gap:0px!important;
-  }
-
-  .headerArea{
-    row-gap:0px!important;
-  }
-
-  .buttonLink:hover{
-  transform: scale(1.1);
   }
 
   .row.multiImage .col:nth-child(1) {
