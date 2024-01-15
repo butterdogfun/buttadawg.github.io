@@ -561,6 +561,7 @@ div#containerXp{
 
   div.headerArea{
     margin-top: 20px;
+    row-gap:0px!important;
   }
 
   .row.multiImage .col:nth-child(1) {
