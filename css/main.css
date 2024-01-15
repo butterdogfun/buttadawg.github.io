@@ -27,6 +27,14 @@ body.normalbody{
 overflow:auto;
 }
 
+body.fc-scroll{
+  overflow: hidden!important
+}
+
+.fc-scroll{
+  overflow: hidden!important
+}
+
 .layer1, .layer2 {
 height: 100dvh;
 width: 100vw;
