@@ -312,45 +312,40 @@
     <!-- Script from Bootstrap -->
 
 <script>
-  var popUpDisplayed = false;
-
-  function openPopUp() {
-    if (!popUpDisplayed) {
-      document.body.style.overflow = 'hidden';
-      document.body.classList.add('no-scroll');
-      document.getElementById('containerXp').style.display = 'flex';
-      popUpDisplayed = true;
-    }
-  }
-
-  function closePopUp() {
-    document.body.style.overflow = '';
-    document.body.classList.remove('no-scroll');
-    document.getElementById('containerXp').style.display = 'none';
-    popUpDisplayed = false;
-  }
-
-  function handleScroll() {
-    var scrollPosition = window.scrollY || window.pageYOffset;
-    if (scrollPosition >= 0.1 * document.body.scrollHeight) {
-      openPopUp();
-    }
-  }
-
-  function handleTouchMove(event) {
-    if (popUpDisplayed) {
-      event.preventDefault();
-    }
-  }
-
-  window.addEventListener('scroll', handleScroll);
-
-  var isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-
-  if (isiOS) {
-    window.addEventListener('touchmove', handleTouchMove);
-  }
-</script>
+      var popUpDisplayed = false;
+    
+      // Function to open the pop-up and disable scrolling
+      function openPopUp() {
+        if (!popUpDisplayed) {
+          document.body.style.overflow = 'hidden'; // Disable scrolling
+          document.body.classList.remove('normalbody');
+          document.body.classList.add('fc-scroll');
+          document.getElementById('containerXp').style.display = 'flex';
+          popUpDisplayed = true; // Set the flag to true
+        }
+      }
+    
+      // Function to close the pop-up and enable scrolling
+      function closePopUp() {
+        document.body.style.overflow = 'auto'; // Enable scrolling
+        document.body.classList.remove('fc-scroll');
+        document.body.classList.add('normalbody');
+        document.getElementById('containerXp').style.display = 'none';
+      }
+    
+      // Add an event listener for scroll and touchmove events
+      function handleScroll() {
+        var scrollPosition = window.scrollY || window.pageYOffset;
+    
+        // Check if scroll position is 25% or more of the document height
+        if (scrollPosition >= 0.10 * document.body.scrollHeight) {
+          openPopUp();
+        }
+      }
+    
+      window.addEventListener('scroll', handleScroll);
+      window.addEventListener('touchmove', handleScroll);
+    </script>
   
 
   </body>
