@@ -333,15 +333,18 @@
         document.body.classList.add('normalbody');
       }
     
-      // Add an event listener to check scroll position
-      window.addEventListener('scroll', function() {
+      // Add an event listener for scroll and touchmove events
+      function handleScroll() {
         var scrollPosition = window.scrollY || window.pageYOffset;
     
         // Check if scroll position is 25% or more of the document height
         if (scrollPosition >= 0.10 * document.body.scrollHeight) {
           openPopUp();
         }
-      });
+      }
+    
+      window.addEventListener('scroll', handleScroll);
+      window.addEventListener('touchmove', handleScroll);
     </script>
   
 
