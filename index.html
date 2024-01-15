@@ -311,41 +311,45 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <!-- Script from Bootstrap -->
 
-    <script>
-      var popUpDisplayed = false;
-    
-      // Function to open the pop-up and disable scrolling
-      function openPopUp() {
-        if (!popUpDisplayed) {
-          document.getElementById('containerXp').style.display = 'flex';
-          document.body.style.overflow = 'hidden'; // Disable scrolling
-          document.body.classList.remove('normalbody');
-          document.body.classList.add('no-scroll');
-          popUpDisplayed = true; // Set the flag to true
-        }
-      }
-    
-      // Function to close the pop-up and enable scrolling
-      function closePopUp() {
-        document.getElementById('containerXp').style.display = 'none';
-        document.body.style.overflow = 'auto'; // Enable scrolling
-        document.body.classList.remove('no-scroll');
-        document.body.classList.add('normalbody');
-      }
-    
-      // Add an event listener for scroll and touchmove events
-      function handleScroll() {
-        var scrollPosition = window.scrollY || window.pageYOffset;
-    
-        // Check if scroll position is 25% or more of the document height
-        if (scrollPosition >= 0.10 * document.body.scrollHeight) {
-          openPopUp();
-        }
-      }
-    
-      window.addEventListener('scroll', handleScroll);
-      window.addEventListener('touchmove', handleScroll);
-    </script>
+<script>
+  var popUpDisplayed = false;
+  var containerXp = document.getElementById('containerXp');
+  var body = document.body;
+
+  // Function to toggle the pop-up and handle scrolling
+  function togglePopUp(display) {
+    popUpDisplayed = display;
+    containerXp.style.display = display ? 'flex' : 'none';
+    body.style.overflow = display ? 'hidden' : 'auto';
+    body.classList.toggle('no-scroll', display);
+    body.classList.toggle('normalbody', !display);
+  }
+
+  // Function to check scroll position and open pop-up if needed
+  function checkScrollPosition() {
+    var scrollPosition = window.scrollY || window.pageYOffset;
+    var triggerPosition = 0.1 * document.body.scrollHeight;
+
+    if (!popUpDisplayed && scrollPosition >= triggerPosition) {
+      togglePopUp(true);
+    }
+  }
+
+  // Event listener for scroll and touchmove events
+  function handleScroll() {
+    checkScrollPosition();
+  }
+
+  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('touchmove', handleScroll);
+
+  // Close pop-up when clicking outside of it
+  containerXp.addEventListener('click', function (event) {
+    if (event.target === containerXp) {
+      togglePopUp(false);
+    }
+  });
+</script>
   
 
   </body>
