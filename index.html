@@ -103,7 +103,7 @@
       function openPopUp() {
         if (!popUpDisplayed) {
           document.getElementById('containerXp').style.display = 'flex';
-          document.body.style.overflow = 'hidden'; // Disable scrolling
+          document.body.style.overflow = 'hidden !important'; // Disable scrolling
           popUpDisplayed = true; // Set the flag to true
         }
       }
