@@ -402,8 +402,7 @@ div#containerXp{
   }
 
   .headerArea{
-    row-gap: 20px;
-    margin-bottom: 20px;
+    margin-top:20px;
   }
   
   .headerArea span:first-child{
