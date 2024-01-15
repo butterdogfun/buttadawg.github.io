@@ -357,13 +357,12 @@ div.wrapperXp{
 
 div#containerXp{
   justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
+  height: 100vh!important;
+  width: 100vw!important;
   align-items: center;
   justify-content: center;
   position: fixed;
-  z-index: 999;
+  z-index: 999!important;
   overflow: hidden;
   display: none;
 }
