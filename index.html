@@ -323,6 +323,12 @@
     body.style.overflow = display ? 'hidden' : 'auto';
     body.classList.toggle('no-scroll', display);
     body.classList.toggle('normalbody', !display);
+
+    if (display) {
+      // Remove event listeners after pop-up is displayed
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('touchmove', handleScroll);
+    }
   }
 
   // Function to check scroll position and open pop-up if needed
