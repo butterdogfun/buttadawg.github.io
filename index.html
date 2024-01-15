@@ -340,29 +340,24 @@
     <!-- Script from Bootstrap -->
 
     <script> 
-      // Memaksa scroll ke bagian atas saat halaman dimuat ulang
       window.addEventListener('beforeunload', function() {
           window.scrollTo(0, 0);
       });
       
-      // Memaksa scroll ke bagian atas saat konten halaman dimuat
       window.addEventListener('DOMContentLoaded', function() {
           window.scrollTo(0, 0);
       });
       
-      // Memaksa scroll ke bagian atas pada saat halaman dan semua sumber daya terkait sepenuhnya dimuat
       window.addEventListener('load', function() {
           window.scrollTo(0, 0);
       });
       
-      // Memaksa scroll ke bagian atas setelah beberapa saat halaman dimuat
       window.addEventListener('pageshow', function() {
           setTimeout(function() {
               window.scrollTo(0, 0);
           }, 100);
       });
       
-      // Memaksa scroll ke bagian atas jika pengguna kembali ke halaman (dari cache atau sejarah)
       window.addEventListener('pageshow', function(event) {
           if (event.persisted) {
               window.scrollTo(0, 0);
