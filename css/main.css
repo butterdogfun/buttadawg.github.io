@@ -568,6 +568,10 @@ div#containerXp{
     row-gap:0px!important;
   }
 
+  .headerArea{
+    row-gap:0px!important;
+  }
+
   .buttonLink:hover{
   transform: scale(1.1);
   }
