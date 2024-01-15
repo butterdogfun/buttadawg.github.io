@@ -365,6 +365,14 @@ div#containerXp{
   display: none;
 }
 
+.row.multiImage .col:nth-child(1) {
+    align-items: start;
+}
+
+.row.multiImage .col:nth-child(2) {
+    align-items: end;
+}
+
 /*Mobile*/
 @media only screen and (max-width: 767px) {
 
@@ -470,6 +478,14 @@ div#containerXp{
   .wrapper.information{
     row-gap:0px;
   }
+
+  .row.multiImage .col:nth-child(1) {
+    align-items: center;
+  }
+  
+  .row.multiImage .col:nth-child(2) {
+      align-items: center;
+  }
 }
 
 /* Tab View */
@@ -543,6 +559,14 @@ div#containerXp{
 
   div.headerArea{
     margin-top: 20px;
+  }
+
+  .row.multiImage .col:nth-child(1) {
+    align-items: center;
+  }
+  
+  .row.multiImage .col:nth-child(2) {
+      align-items: center;
   }
 
 }
