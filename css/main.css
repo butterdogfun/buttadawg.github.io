@@ -95,7 +95,7 @@ div.wrapper.quote{
 }
 
 .quote span{
-  font-size: 1.2rem;
+  font-size: 20.95px;
 }
 
 .wrapper.information{
@@ -140,7 +140,7 @@ div.wrapper.quote{
 }
 
 .buttonXP span{
-  font-size: 1.75rem;
+  font-size: 28px;
 }
 
 .buttonXP img{
@@ -229,6 +229,7 @@ div.wrapper.quote{
   color: white;
   margin-bottom: 8px;
   font-family: "Press Start 2P", system-ui;
+  font-size: 17px;
 }
 
 a.green, a.triangle{
@@ -290,7 +291,7 @@ a.triangle{
 }
 
 .row.buttonArea{
-  row-gap: 20px;
+  row-gap: 0px;
   display: flex;
 }
 
