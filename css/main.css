@@ -471,8 +471,8 @@ div#containerXp{
   }
 }
 
-/* Untuk Tampilan Tablet */
-@media only screen and (min-width: 768px) and (max-width: 1366px) {
+/* Tab View */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   img.sec-icon{
     margin-top:10px;
     height:55px;
