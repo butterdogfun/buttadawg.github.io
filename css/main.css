@@ -474,7 +474,7 @@ div#containerXp{
   }
 
   div.headerArea{
-
+    margin-top: 20px;
   }
 
   .wrapper.information{
@@ -568,9 +568,6 @@ div#containerXp{
     margin-bottom: 10px;
   }
 
-  div.headerArea{
-    margin-top: 20px;
-  }
 
   .row.multiImage .col:nth-child(1) {
       align-items: start;
