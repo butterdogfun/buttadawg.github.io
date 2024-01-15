@@ -562,11 +562,11 @@ div#containerXp{
   }
 
   .row.multiImage .col:nth-child(1) {
-    align-items: center;
+      align-items: start;
   }
   
   .row.multiImage .col:nth-child(2) {
-      align-items: center;
+      align-items: end;
   }
 
 }
