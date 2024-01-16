@@ -15,6 +15,13 @@ body {
   margin: 0px;
 }
 
+div#heroContainer {
+  background-image: url("https://raw.githubusercontent.com/butterdogfun/butterassets.github.io/main/bg.png");
+  background-position: center; 
+  background-size:cover!important;
+  background-repeat: no-repeat;
+}
+
 body.dialog-prevent-scroll{
   overflow: hidden!important;
 }
