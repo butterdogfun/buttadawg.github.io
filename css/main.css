@@ -26,6 +26,7 @@ div#headerContainer {
   background-position: center; 
   background-size:cover!important;
   background-repeat: no-repeat;
+  padding-bottom:5px;
 }
 
 body.dialog-prevent-scroll{
