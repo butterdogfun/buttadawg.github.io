@@ -32,6 +32,7 @@ body.fc-scroll{
   overscroll-behavior: none!important;
   position: fixed!important;
   max-width: 100%;
+  background-size: auto;
 }
 
 .fc-scroll{
@@ -39,6 +40,7 @@ body.fc-scroll{
   overscroll-behavior: none!important;
   position: fixed!important;
   max-width: 100%;
+  background-size: auto;
 }
 
 .layer1, .layer2 {
