@@ -7,7 +7,7 @@
 
 body {
   background-image: url("https://raw.githubusercontent.com/butterdogfun/butterassets.github.io/main/bg.png");
-  background-position: auto;
+  background-position: unset;
   background-size: cover!important;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -32,7 +32,7 @@ body.fc-scroll{
   overscroll-behavior: none!important;
   position: fixed!important;
   max-width: 100%;
-  background-size: auto!important;
+  background-size: cover!important;
   width: 100%!important;
   background-position: unset!important;
 }
@@ -42,7 +42,7 @@ body.fc-scroll{
   overscroll-behavior: none!important;
   position: fixed!important;
   max-width: 100%;
-  background-size: auto!important;
+  background-size: cover!important;
   width: 100%!important;
   background-position: unset!important;
 }
