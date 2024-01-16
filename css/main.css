@@ -30,13 +30,11 @@ overflow:auto;
 body.fc-scroll{
   overflow: hidden!important;
   overscroll-behavior: none!important;
-  pointer-events: none!important;
 }
 
 .fc-scroll{
   overflow: hidden!important;
   overscroll-behavior: none!important;
-  pointer-events: none!important;
 }
 
 .layer1, .layer2 {
