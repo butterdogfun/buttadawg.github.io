@@ -14,7 +14,7 @@ body {
   margin: 0px;
 }
 
-div#heroContainer {
+div#headerContainer {
   background-image: url("https://raw.githubusercontent.com/butterdogfun/butterassets.github.io/main/bg.png");
   background-position: center; 
   background-size:cover!important;
