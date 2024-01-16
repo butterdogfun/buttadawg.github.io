@@ -28,11 +28,13 @@ overflow:auto;
 }
 
 body.fc-scroll{
-  overflow: hidden!important
+  overflow: hidden!important;
+  overscroll-behavior: none!important;
 }
 
 .fc-scroll{
-  overflow: hidden!important
+  overflow: hidden!important;
+    overscroll-behavior: none!important;
 }
 
 .layer1, .layer2 {
