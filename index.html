@@ -313,7 +313,7 @@
 
     <script>
       var popUpDisplayed = false;
-      
+    
       // Function to open the pop-up and disable scrolling
       function openPopUp() {
         if (!popUpDisplayed) {
@@ -324,34 +324,27 @@
           popUpDisplayed = true; // Set the flag to true
         }
       }
-      
+    
       // Function to close the pop-up and enable scrolling
       function closePopUp() {
         document.body.style.overflow = 'auto'; // Enable scrolling
         document.body.classList.remove('fc-scroll');
         document.body.classList.add('normalbody');
         document.getElementById('containerXp').style.display = 'none';
-        popUpDisplayed = false; // Set the flag to false
       }
-      
+    
       // Add an event listener for scroll and touchmove events
       function handleScroll() {
-        if (!popUpDisplayed) {
-          var scrollPosition = window.scrollY || window.pageYOffset;
-      
-          // Check if scroll position is 25% or more of the document height
-          if (scrollPosition >= 0.10 * document.body.scrollHeight) {
-            openPopUp();
-          }
+        var scrollPosition = window.scrollY || window.pageYOffset;
+    
+        // Check if scroll position is 25% or more of the document height
+        if (scrollPosition >= 0.10 * document.body.scrollHeight) {
+          openPopUp();
         }
       }
-      
+    
       window.addEventListener('scroll', handleScroll);
-      window.addEventListener('touchmove', function (event) {
-        if (popUpDisplayed) {
-          event.preventDefault(); // Prevent scroll when pop-up is displayed
-        }
-      });
+      window.addEventListener('touchmove', handleScroll);
     </script>
   
 
