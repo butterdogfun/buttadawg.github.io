@@ -34,6 +34,7 @@ body.fc-scroll{
   max-width: 100%;
   background-size: auto;
   width: 100%!important;
+  background-position: unset!important;
 }
 
 .fc-scroll{
@@ -43,6 +44,7 @@ body.fc-scroll{
   max-width: 100%;
   background-size: auto;
   width: 100%!important;
+  background-position: unset!important;
 }
 
 .layer1, .layer2 {
