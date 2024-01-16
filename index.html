@@ -322,10 +322,12 @@
 
     <script>
       var popUpDisplayed = false;
+      var savedScrollPosition = 0;
     
       // Function to open the pop-up and disable scrolling
       function openPopUp() {
         if (!popUpDisplayed) {
+          savedScrollPosition = window.scrollY || window.pageYOffset; // Save the current scroll position
           document.body.style.overflow = 'hidden'; // Disable scrolling
           document.body.classList.remove('normalbody');
           document.body.classList.add('fc-scroll');
@@ -340,13 +342,16 @@
         document.body.classList.remove('fc-scroll');
         document.body.classList.add('normalbody');
         document.getElementById('containerXp').style.display = 'none';
+        
+        // Restore the saved scroll position
+        window.scrollTo(0, savedScrollPosition);
       }
     
       // Add an event listener for scroll and touchmove events
       function handleScroll() {
         var scrollPosition = window.scrollY || window.pageYOffset;
     
-        // Check if scroll position is 25% or more of the document height
+        // Check if scroll position is 10% or more of the document height
         if (scrollPosition >= 0.10 * document.body.scrollHeight) {
           openPopUp();
         }
@@ -355,6 +360,7 @@
       window.addEventListener('scroll', handleScroll);
       window.addEventListener('touchmove', handleScroll);
     </script>
+
   
 </div>
   </body>
