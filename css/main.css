@@ -31,12 +31,14 @@ body.fc-scroll{
   overflow: hidden!important;
   overscroll-behavior: none!important;
   position: fixed!important;
+  max-width: 100%;
 }
 
 .fc-scroll{
   overflow: hidden!important;
   overscroll-behavior: none!important;
   position: fixed!important;
+  max-width: 100%;
 }
 
 .layer1, .layer2 {
