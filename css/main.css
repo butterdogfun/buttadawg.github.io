@@ -44,21 +44,13 @@ overflow:auto;
 body.fc-scroll{
   overflow: hidden!important;
   overscroll-behavior: none!important;
-  position: fixed!important;
   max-width: 100%;
-  background-size: cover!important;
-  width: 100%!important;
-  background-position: unset!important;
 }
 
 .fc-scroll{
   overflow: hidden!important;
   overscroll-behavior: none!important;
-  position: fixed!important;
   max-width: 100%;
-  background-size: cover!important;
-  width: 100%!important;
-  background-position: unset!important;
 }
 
 .layer1, .layer2 {
